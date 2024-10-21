@@ -5,6 +5,7 @@ import requests
 # Examples:
 #
 def decode_bencode(bencoded_value):
+    return bencodepy.decode(bencoded_value)
     if chr(bencoded_value[0]).isdigit():
         first_colon_index = bencoded_value.find(b":")
         if first_colon_index == -1:
